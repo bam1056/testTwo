@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 @Component({
   selector: "my-app",
+  moduleId: module.id,
+  styleUrls: ["app.component.css"],
   template: `
    <h1>{{title}}</h1>
    <nav>

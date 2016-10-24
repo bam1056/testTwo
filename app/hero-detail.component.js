@@ -21,10 +21,13 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.forEach(function (params) {
-            var id = +params['id'];
+            var id = +params["id"];
             _this.heroService.getHero(id)
                 .then(function (hero) { return _this.hero = hero; });
         });
+    };
+    HeroDetailComponent.prototype.goBack = function () {
+        this.location.back();
     };
     return HeroDetailComponent;
 }());
@@ -36,7 +39,8 @@ HeroDetailComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: "my-hero-detail",
-        templateUrl: "hero-detail.component.html"
+        templateUrl: "hero-detail.component.html",
+        styleUrls: ["hero-detail.component.css"]
     }),
     __metadata("design:paramtypes", [hero_service_1.HeroService,
         router_1.ActivatedRoute,
