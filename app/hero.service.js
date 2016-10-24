@@ -30,11 +30,11 @@ var HeroService = (function () {
         return this.getHeroes()
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
-    HeroService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], HeroService);
     return HeroService;
 }());
+HeroService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], HeroService);
 exports.HeroService = HeroService;
 //# sourceMappingURL=hero.service.js.map
