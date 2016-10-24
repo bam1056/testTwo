@@ -21,15 +21,15 @@ var DashboardComponent = (function () {
             .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
     };
     DashboardComponent.prototype.gotoDetail = function (hero) { };
+    DashboardComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: "my-dashboard",
+            templateUrl: "dashboard.component.html",
+        }), 
+        __metadata('design:paramtypes', [hero_service_1.HeroService])
+    ], DashboardComponent);
     return DashboardComponent;
 }());
-DashboardComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: "my-dashboard",
-        templateUrl: "dashboard.component.html",
-    }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
-], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;
 //# sourceMappingURL=dashboard.component.js.map
